@@ -1,4 +1,4 @@
-# Construindo uma API para envio de Email
+# Construindo uma API Rest
 
 
 # ...
