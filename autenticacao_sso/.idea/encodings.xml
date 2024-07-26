@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/hrms/autenticacao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hrms/pagamento/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hrms/rh/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hrms/src/main/java" charset="UTF-8" />
+  </component>
+</project>

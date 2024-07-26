@@ -41,8 +41,14 @@ public class JwtUtil {
     }
 
     public boolean verificaToken(String token, String username) {
-        return (username.equals(estrairNomeUsuario(token)) && !espiracaoToken(token) && !usadoToken(token));
+        try {
+            return (username.equals(estrairNomeUsuario(token)) && !espiracaoToken(token) && !usadoToken(token));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
+
 
     private boolean espiracaoToken(String token) {
         return estrair(token).getExpiration().before(new Date());
@@ -56,7 +62,7 @@ public class JwtUtil {
         listaTokensUsados.add(token);
     }
 
-    // Adicione na classe JwtUtil ou ajuste a sua lógica conforme necessário
+
     public UserDetailsService getUserDetails(String username) {
         return (UserDetailsService) userDetailsService.loadUserByUsername(username);
     }

@@ -24,7 +24,7 @@ public class ConfiguracaoSegurancaRH {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .anyRequest().hasAnyRole("USER_RH", "ADMIN")
+                        .anyRequest().permitAll()//.hasAnyRole("USER_RH", "ADMIN")
                 )
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
