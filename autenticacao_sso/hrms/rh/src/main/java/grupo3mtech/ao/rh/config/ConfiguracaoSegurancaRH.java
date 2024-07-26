@@ -2,6 +2,7 @@ package grupo3mtech.ao.rh.config;
 import grupo3mtech.ao.rh.util.FiltrarRequisicaoJwt;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -22,17 +23,10 @@ public class ConfiguracaoSegurancaRH {
         this.filtrarRequisicaoJwt = filtrarRequisicaoJwt;
     }
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails user = User.builder()
-                .username("garcia")
-                .password("{noop}password")
-                .roles("USER_PAGAMENTOS")
-                .build();
-
-        return new InMemoryUserDetailsManager(user);
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication()
+                .withUser("pedro").password("{noop}senha").roles("USER");
     }
-
 
     @Bean
     public SecurityFilterChain filtroSeguranca(HttpSecurity http) throws Exception {
