@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  	<title> SGDocs </title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/content/plugins/fontawesome-free/css/all.min.css}">
+	<link rel="stylesheet" th:href="@{/content/plugins/adminlte/dist/css/adminlte.min.css}">
+	<link rel="stylesheet" th:href="@{/content/plugins/select2-4.0.13/dist/css/select2.css}">
+	<link rel="stylesheet" th:href="@{/content/estilos/style.css}">
+<style>
+.buttao{
+	float:left;
+	margin-right:2px;
+	background-color: #026a2d;
+	color:white;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 30px;
+	font-weight: bold;  
+	border: solid 5px #000;
+	text-transform:uppercase;
+	border-width: 0 4px 5px 0;
+	border-radius: 5px;
+	border-color: transparent rgb(0, 169, 0) rgb(0, 169, 0) transparent;
+	background-clip: padding-box;  
+}
+
+.buttao:hover{
+	border-width: 0 2px 3px 0; 
+	margin-right: 4px;
+	position: relative;
+	left: 2px;
+	top: 3px;
+	color:white;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #001225;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+  	color: white;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	font-weight:700;
+  	text-transform:uppercase;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  	background-color: #ddd;
+}
+
+.button{
+  	float:left;
+  	margin-right:2px;
+  	background-color: #026a2d;
+  	color:white;
+  	height: 40px;
+  	line-height: 40px;
+  	padding: 0 30px;
+  	font-weight: bold;  
+  	border: solid 5px #000;
+  	text-transform:uppercase;
+  	border-width: 0 4px 5px 0;
+  	border-radius: 5px;
+  	border-color: transparent rgb(0, 169, 0) rgb(0, 169, 0) transparent;
+  	background-clip: padding-box;  
+}
+
+.button:hover{
+	border-width: 0 2px 3px 0; 
+  	margin-right: 4px;
+  	position: relative;
+  	left: 2px;
+  	top: 3px;
+  	color:white;
+}
+</style>
+</head>
+<body class="hold-transition layout-top-nav">
+	<div class="wrapper">
+  		<nav style="background:#023160;" class="main-header navbar navbar-expand-md navbar-light navbar-white">
+    		<div class="container">
+      			<a th:href="@{/admin/dashboard}" class="navbar-brand"> 
+      				<img th:src="@{/content/imagens/1.png}" alt="Admin" class="brand-image elevation-3">
+      			</a>
+      			<button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      			<div class="collapse navbar-collapse order-3" id="navbarCollapse">
+        			<form class="form-inline ml-0 ml-md-3">
+          				<div class="input-group input-group-sm">
+            				<input class="form-control form-control-navbar" type="search" placeholder="Procurar documento..." aria-label="Search">
+            				<div class="input-group-append">
+              					<button class="btn btn-navbar" type="submit">
+                					<i class="fas fa-search"></i>
+              					</button>
+            				</div>
+          				</div>
+        			</form>
+      			</div>
+      			<ul id="menu" class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+        			<li class="nav-item dropdown">
+          				<a class="nav-link" data-toggle="dropdown" href="hjk"> 
+          					<i style="color:white;" class="fas fa-user"></i>
+            				<span style="color:white;"> Conta </span>
+         				</a>
+        			</li>
+          			<span style="color:white;position:relative;top:5px;"> | </span>
+        			<li class="nav-item dropdown">
+          				<a class="nav-link" th:href="@{/logout}">
+            				<i style="color:white;" class="fas fa-sign-in-alt"></i>
+            				<span style="color:white;">   Sair </span>
+            			</a>
+        			</li>
+      			</ul>
+    		</div>
+  		</nav>
+  		<div class=""> 
+	    	<ul>
+	     		<li class="active"><a th:href="@{/admin/dashboard}"><i style="color:white;" class="fas fa-home"></i> Início </a></li>
+	     		<li><a th:href="@{/admin/usuario}"><i style="color:white;" class="fas fa-users"></i> Usuários </a></li>
+	     		<li> <a href=""><i class="nav-icon fas fa-file"></i> Documentos </a></li>
+	     		<li> <a href=""><i class="far fa-dot-circle nav-icon"></i> Protocolo </a></li>
+	     		<li> <a href=""> <i class="nav-icon fas fa-book"></i> Relatórios </a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

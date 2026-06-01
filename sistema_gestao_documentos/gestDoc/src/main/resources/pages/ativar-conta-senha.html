@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sistema de Gestão de Documentos</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link th:href="@{/content/imagens/favicon.png}" rel="icon">
+  <link th:href="@{/content/imagens/apple-touch-icon.png}" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <link th:href="@{/content/plugins/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{/content/estilos/login-style.css}" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/content/plugins/fontawesome-free/css/all.min.css}">
+  
+<style>
+.centraliza{
+	width: 100vw;
+	height: 100vh;
+	background: #6C7A89;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+</style>
+</head>
+<body style="overflow-y: hidden;">
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center"></div>
+  </header>
+  <section id="hero" class="d-flex align-items-center centraliza">
+    <div style="width:400px;height:400px;" class="login-box">
+        <div class="card card-outline card-primary">
+          <div class="card-header text-center">
+            <a href="#" class="h1"><b> GestDoc </b></a>
+          </div>
+          <div class="card-body">
+            <form action="" method="post">
+              <div class="input-group mb-3">
+              	<input name="senha" type="password" class="form-control" placeholder="Senha">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input name="senha1" type="password" class="form-control" placeholder="Confirmar Senha">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <div class="">
+                    <label for="remember">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <button type="submit" class="btn btn-primary btn-block"> Ativar </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </section>
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

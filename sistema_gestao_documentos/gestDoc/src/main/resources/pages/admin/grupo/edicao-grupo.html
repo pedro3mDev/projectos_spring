@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:insert="admin/template-header.html"> </header>
+<div class="content-fluid">
+    <div class="content-header">
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 style="font-weight:900;text-transform:uppercase;" class="m-0 text-dark"> Actualizar Grupos </h1>
+          </div>
+          <div class="col-sm-6">    
+          </div>
+        </div>
+      </div>
+    </div>
+    <form method="post" >
+    <input type="hidden" name="id" th:value="${grupo?.id}">
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div style="border-left:8px solid #023160;" class="card">
+              <div class="card-header">
+                  <h2 style="text-transform: uppercase;font-size:20px;color: #1b88f6;font-weight: 600;"> Informações do Grupo</h2>
+              </div>
+              <div class="card-body">
+             	  <div class="text-danger" th:if="${erros?.hasFieldErrors('nome')}"><span th:text="${erros?.getFieldError('nome').getDefaultMessage()}"/></div>
+                    <tr> 
+                      <td> <label style="color:#777;font-weight: 400;"> Nome </label></td>
+                      <td> <input name="nome" type="text" placeholder="Nome do Grupo" class="form-control" th:value="${grupo?.nome}"/></td>
+                    </tr>
+                  </div>
+                </div>
+                <br>
+              </div>
+            <div class="col-lg-6">
+              <div style="border-left:8px solid #023160;" class="card">
+                <div class="card-header">
+                  <h2 style="text-transform: uppercase;font-weight:600;font-size:20px;color: #1b88f6;"> Usuários do Grupo </h2>
+                </div>
+                <div class="card-body"> 
+                  <tr> 
+                    <td> <label style="color:#777;font-weight: 400;"> Usuários Selecionados</label></td>
+                    <td> 
+                      <select id="idUsuarios" name="idUsuarios" class="form-control" multiple="multiple"> 
+                         <option 
+                         	th:each="i : ${usuarios}" 
+                         	th:value="${i.id}" 
+                         	th:text="${i.email}"
+                         	th:selected="${grupo?.idUsuarios?.contains(i.id)}"> 
+                         </option>
+                      </select>
+                    </td>
+                  </tr>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div style="border-left:8px solid #023160;" class="card">
+                <div class="card-header">
+                  <h2 style="text-transform: uppercase;font-weight:600;font-size:20px;color: #1b88f6;"> Permissões do Grupo </h2>
+                </div>
+                <div class="card-body"> 
+                  <tr> 
+                    <td> <label style="color:#777;font-weight: 400;"> Permissões selecionadas</label></td>
+                    <td> 
+                      <select id="permissoes" name="permissoes" class="form-control" multiple="multiple"> 
+                         <option 
+                         	th:each="i : ${permissoes}" 
+                         	th:value="${i}" 
+                         	th:text="${i}"
+                         	th:selected="${grupo?.permissoes?.contains(i)}"> 
+                         </option>
+                      </select>
+                    </td>
+                  </tr>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <hr>
+      <div class="card-body">
+        <button style="text-transform: uppercase;font-size: 20px;font-weight: 600; letter-spacing: 1px; line-height: none;" class="buttao" type="submit">  Salvar </button>
+      </div>
+    </div>
+  </form>
+</div>
+<div th:insert="admin/template-footer.html"> </div>
+</body>
+<script>
+$(function(){
+   	$('#permissoes').select2({
+    	multiple:true,
+   	});
+   	
+   	$('#idUsuarios').select2({
+    	multiple:true,
+   	});
+   	
+   	
+})
+</script>
+</html>

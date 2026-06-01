@@ -1,0 +1,8 @@
+.select2-container--default .select2-results > .select2-results__options,
+.select2-container--default .select2-selection--multiple .select2-selection__rendered{
+	background-color: #fff!important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+	color: #1b88f6!important;
+}

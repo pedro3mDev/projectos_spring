@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>GestDoc | Usuario</title>
+</head>
+<body>
+    <header th:insert="admin/template-header.html"> </header>
+    
+	<div class="content-header">
+    	<div class="container">
+        	<div class="row mb-2">
+          		<div class="col-sm-6">
+            		<h1 style="font-weight:800;text-transform:uppercase;" class="m-0 text-dark"> Busque, visualize e altere usuários! </h1>
+          		</div>
+          		<div class="col-sm-6">
+            
+          		</div>
+        	</div>
+      	</div>
+    </div>
+
+    <div class="content">
+		<div class="container">
+        	<div class="row">
+          		<div class="col-lg-9">          
+            		<div class="card">
+              			<div class="card-header">
+                			<h3 style="font-weight: 600;" class="card-title"> Suporte de como gerenciar dos usuários. </h3>
+                			<div class="card-tools">
+                  				<button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Ocultar">
+                    				<i class="fas fa-minus"></i>
+                    			</button>
+                  				<button type="button" class="btn btn-tool"  data-toggle="tooltip" title="Remover">
+                    				<i class="fas fa-times"></i>
+                    			</button>
+                			</div>
+              			</div>
+              			<div class="card-body">
+                 			Conteúdo...
+              			</div>
+            		</div>
+          		</div>
+         	<div class="col-lg-3">
+            	<div class="card">              
+              		<div class="card-body">
+                		<a href="#" class="button" data-toggle="modal" data-target="#modal-default"> <i class="fa fa-plus"> </i> Novo Usuário </a>
+              		</div>
+            	</div>
+				<div class="modal fade" id="modal-default">
+        			<div class="modal-dialog">
+          				<div class="modal-content">
+            				<div class="modal-header">
+              					<h3 style="font-weight: 600;text-transform: uppercase;" class="modal-title"> Adicionando Usuário </h3>
+              					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                					<span aria-hidden="true">&times;</span>
+              					</button>
+            				</div>
+            				<div class="modal-body">
+	                			<form action="" method="post">
+	                   				<table class="table">
+		                     			<tr> 
+		                        			<td> <label> Nome:* </label></td>
+		                        			<td> <input name="" type="text" class="form-control"> </td>
+		                       			</tr> 
+										<tr> 
+				                        	<td> <label> Ativar / Desativar:* </label></td>
+				                        	<td> <input type="checkbox" class="form-control"></td>
+		                       			</tr> 
+					                	<tr> 
+		            		            	<td> <label> Email / Identificador:* </label></td>
+		                    		    	<td> <input name="" class="form-control" type="email"> </td>
+		                       			</tr> 
+	      							</table>
+	               				</form>
+            				</div>
+				            <div class="modal-footer justify-content-between">
+				            	<button type="button" style="text-transform: uppercase;font-weight: 500;" class="btn btn-danger" data-dismiss="modal"> Fechar </button>
+				              	<button type="button" style="text-transform: uppercase;font-weight: 500;" class="btn btn-success"> Salvar </button>
+				            </div>
+          				</div>
+        			</div>
+      			</div>      
+    		</div>
+		</div>
+       
+        <div class="row">
+         	<div class="col-12">
+            	<div class="card">
+              		<div class="card-header">
+                		<div class="card-tools">
+                  			<div class="input-group input-group-sm" style="width: 150px;">
+                    			<input type="text"  name="table_search" class="form-control float-right" placeholder="Pesquisar...">
+								<div class="input-group-append">
+                      				<button type="submit" class="btn btn-default">
+                      					<i class="fas fa-search"></i>
+                      				</button>
+                    			</div>
+                  			</div>
+                		</div>
+              		</div>
+              		<div class="card-body table-responsive p-0" style="height: 300px;">
+                		<table class="table table-head-fixed text-nowrap">
+                  			<thead>
+                    			<tr>
+                      				<th> Nome </th>
+                      				<th> Email </th>
+                      				<th> Ativo </th>
+                      				<th> Gestor / Líder </th>
+                      				<th> Grupos </th>
+                     				<th> Ações </th>
+                    			</tr>
+                  			</thead>
+                  			<tbody>
+                    			<tr>
+                     				<td>Osvaldo Beto</td>
+                      				<td>osvaldobeto@anluge.com</td>
+                      				<td><span class="tag tag-success"> SIM </span></td>
+                      				<td> Francisco </td>
+                      				<td> 05/11/2000 </td>
+                     				<td>
+	                      				<a class="btn btn-primary btn-sm" title="Editar colaborador" type="button" href="#">
+	        								<i class="fa fa-edit"></i>
+	      								</a> 
+	     								<a class="btn btn-warning btn-sm" title="Gerar relatório" type="button" href="#">
+	      									<i class="fa fa-file"></i>
+	      								</a> 
+										<a class="btn btn-danger btn-sm" title="Eliminar colaborador" type="button" href="#">
+	        								<i class="fa fa-trash"></i>
+	        							</a>
+                    				</td>
+                    			</tr>
+		                  	</tbody>
+                		</table>
+              		</div>
+              		<hr>
+              
+              		<div class="card-body">                
+                		<a th:href="@{/admin_grupo_listar}" class="button" > <i class="fa fa-plus"> </i> Novo Grupo </a>
+						<a th:href="@{/admin_departamento}" class="button" > <i class="fa fa-plus"> </i> Novo Departamento </a>
+              		</div>
+            	</div>
+        	</div>
+        </div>
+	</div>
+</div>
+
+    <div th:insert="admin/template-footer.html"> </div>
+</body>
+</html>

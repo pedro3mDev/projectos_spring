@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>GestDoc | Usuario</title>
+
+
+</head>
+    <header th:insert="admin/template-header.html"> </header>
+
+<body class="hold-transition layout-top-nav">
+<div class="content-wrapper">
+    <div class="content-header">
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 style="font-weight:900;text-transform:uppercase;" class="m-0 text-dark"> Departamento </h1>
+          </div>
+          <div class="col-sm-6">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form action="" >
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div style="border-left:8px solid #023160;" class="card">
+              <div class="card-header">
+                  <h2 style="text-transform: uppercase;font-size:20px;color: #1b88f6;font-weight: 600;"> Nome do Departamento </h2>
+              </div>
+              <div class="card-body">
+                    <tr> 
+                      <td> <label style="color:#777;font-weight: 400;"> Nome </label></td>
+                      <td> <input name="" type="text" placeholder="Nome do Departamento" class="form-control"/></td>
+                    </tr>
+                  </div>
+                </div>
+                <br>
+              </div>
+            <div class="col-lg-6">
+              <div style="border-left:8px solid #023160;" class="card">
+                <div class="card-header">
+                  <h2 style="text-transform: uppercase;font-weight:600;font-size:20px;color: #1b88f6;"> Usuários do Departamento </h2>
+                </div>
+                <div class="card-body"> 
+                  <tr> 
+                    <td> <label style="color:#777;font-weight: 400;"> Usuários do departamento </label></td>
+                    <td> 
+                      <select name="" id="category" class="form-control"> 
+                        <option> Departamento A </option>
+                        <option> Departamento B </option>
+                        <option> Departamento C </option>
+                        <option> Departamento D </option>
+                      </select>
+                    </td>
+                  </tr>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <hr>
+      <div class="card-body">
+        <button style="text-transform: uppercase;font-size: 20px;font-weight: 600; letter-spacing: 1px; line-height: none;" class="buttao" type="submit">  Salvar </button>
+      </div>
+    </div>
+  </form>
+</div>
+<div th:insert="admin/template-footer.html"> </div>
+</body>
+<script type="text/javascript">
+$(function(){
+   	$('#permissoes').select2({
+    	multiple:true,
+  	});
+})
+</script>
+</html>

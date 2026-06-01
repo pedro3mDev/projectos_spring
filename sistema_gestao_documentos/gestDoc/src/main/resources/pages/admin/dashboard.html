@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>GestDoc | DashBoard</title>
+</head>
+<body>
+    <header th:insert="admin/template-header.html"> </header>
+			
+    	<div class="services pb-5">
+		  <div class="container">
+		    <div class="pt-5">
+		      <h2 style="font-weight: 500;text-transform: uppercase;" class="vc_custom_heading ico_header"> Bem-vindo ao SGDocs </h2>
+		      <hr>
+		      <div class="row">
+		        <div class="col-md-3">
+		          <div class="investor-box" style="background-color:#001225;">
+		             
+		             <h2 style="font-weight: 700;text-transform: uppercase;color:white;"> Usuários </h2>
+		             <span style="line-height: 80px;color: white;font-size: 32px;"> 0 </span>
+		            <div class="flip-view">
+		              <a title="Página Usuários" href="usuarios.html" style="color: #fff;"> Gerenciar <i class="fas fa-chevron-circle-right"></i></a>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="col-md-3">
+		          <div class="investor-box" style="background-color:#001225;">
+		            <h2 style="font-weight: 700;text-transform: uppercase;color:white;"> Grupos </h2>
+		            <span style="line-height: 80px;color: white;font-size: 32px;"> 0 </span>
+		             <div class="flip-view">
+		              <a title="Página Grupos" href="grupos.html"  style="color: #fff;"> Gerenciar  <i class="fas fa-chevron-circle-right"></i></a>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="col-md-3">
+		          <div class="investor-box" style="background-color:#001225;">
+		            <h2 style="font-weight: 700;text-transform: uppercase;color:white;"> Departamentos </h2>
+		            <span style="line-height: 80px;color: white;font-size: 32px;"> 0 </span>
+		            
+		             <div class="flip-view">
+		              <a title="Página departamento" href="departamento.html" style="color: #fff;"> Gerenciar  <i class="fas fa-chevron-circle-right"></i></a>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="col-md-3">
+		          <div class="investor-box" style="background-color:#001225;">
+		            <h2 style="font-weight: 700;text-transform: uppercase;color:white;"> Relatórios </h2>
+		            <span style="line-height: 80px;color: white;font-size: 32px;"> 0 </span>
+		             <div class="flip-view">
+		              <a href="#" style="color: #fff;"> Gerenciar <i class="fas fa-chevron-circle-right"></i></a>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+    <div th:insert="admin/template-footer.html"> </div>
+</body>
+</html>
